@@ -54,15 +54,8 @@ const newNoteRef = ref(null)
 const notesStore = useNotesStore()
 
 const addNote = () => {
-  let currentDate = new Date().getTime()
-  let id = currentDate.toString()
+  notesStore.addNote(newNote.value)
 
-  const note = {
-    id,
-    content: newNote.value
-  }
-  
-  notes.value.unshift(note)
   newNote.value = ''
   newNoteRef.value.focus()
 }
