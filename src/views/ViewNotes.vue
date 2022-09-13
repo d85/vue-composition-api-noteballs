@@ -26,7 +26,7 @@
     </div>
 
     <NoteItem
-      v-for="note in notes"
+      v-for="note in notesStore.notes"
       :key="note.id"
       :note="note"
       @deleteClicked="deleteNote"
@@ -42,24 +42,16 @@
 
 import { ref } from 'vue'
 import NoteItem from '@/components/notes/NoteItem.vue'
+import { useNotesStore } from '@/stores/notesStore.js'
 
 const newNote = ref('')
 const newNoteRef = ref(null)
 
 /*
-notes
+  stores
 */
 
-const notes = ref([
-  {
-    id: 'id1',
-    content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quia, quibusdam dolor cumque consequatur perferendis reprehenderit dolorem optio sequi provident dolores nulla magnam corrupti eos reiciendis eligendi vitae obcaecati amet?'
-  },
-  {
-    id: 'id2',
-    content: 'This is a shorter note! Woo!'
-  },
-])
+const notesStore = useNotesStore()
 
 const addNote = () => {
   let currentDate = new Date().getTime()
