@@ -36,6 +36,7 @@
 */
 
 import { ref } from 'vue'
+import { vAutofocus } from '@/directives/vAutofocus'
 
 /*
   props
@@ -78,15 +79,5 @@ const focusTextarea = () => {
 defineExpose({
   focusTextarea
 })
-
-/*
-  directives
-*/
-
-const vAutofocus = {
-  mounted: (el) => {
-    el.focus()
-  }
-}
 
 </script>
