@@ -23,7 +23,7 @@
       class="input"
       type="text"
       placeholder="Do you love noteballs?"
-      maxLength="100"
+      :maxLength="maxChars"
       v-autofocus
     />
   </div>
@@ -48,8 +48,8 @@ const notesStore = useNotesStore()
 /*
   love noteballs
 */
-
+const maxChars = ref(50)
 const loveNoteballs = ref('')
-useWatchCharacters(loveNoteballs)
+useWatchCharacters(loveNoteballs, maxChars.value)
 
 </script>
