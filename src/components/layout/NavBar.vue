@@ -73,6 +73,7 @@ const showMobileNav = ref(false)
 /*
   click outside to close
 */
+
 const navbarMenuRef = ref(null)
 const navbarBurgerRef = ref(null)
 
