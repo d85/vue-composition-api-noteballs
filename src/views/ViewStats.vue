@@ -10,11 +10,11 @@
       <tbody>
         <tr>
           <td>Number of Notes</td>
-          <td>{{ notesStore.totalNotesCount }}</td>
+          <td>{{ storeNotes.totalNotesCount }}</td>
         </tr>
         <tr>
           <td>Number of Characters (of all notes)</td>
-          <td>{{ notesStore.totalCharactersCount }}</td>
+          <td>{{ storeNotes.totalCharactersCount }}</td>
         </tr>
       </tbody>
     </table>
@@ -35,7 +35,7 @@
 */
 
 import { ref } from 'vue'
-import { useNotesStore } from '@/stores/notesStore'
+import { useStoreNotes } from '@/stores/storeNotes'
 import { vAutofocus } from '@/directives/vAutofocus'
 import { useWatchCharacters } from '@/use/useWatchCharacters'
 
@@ -43,7 +43,7 @@ import { useWatchCharacters } from '@/use/useWatchCharacters'
   store
 */
 
-const notesStore = useNotesStore()
+const storeNotes = useStoreNotes()
 
 /*
   love noteballs

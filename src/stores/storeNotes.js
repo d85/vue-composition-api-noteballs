@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '@/js/firebase'
 
-export const useNotesStore = defineStore('notesStore', {
+export const useStoreNotes = defineStore('storeNotes', {
   state: () => {
     return {
       notes: []

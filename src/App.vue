@@ -12,20 +12,20 @@
 
 import { onMounted } from 'vue'
 import NavBar from '@/components/layout/NavBar.vue'
-import { useNotesStore } from '@/stores/notesStore'
+import { useStoreNotes } from '@/stores/storeNotes'
 
 /*
   store
 */
 
-const notesStore = useNotesStore()
+const storeNotes = useStoreNotes()
 
 /*
   mounted
 */
 
 onMounted(() => {
-  notesStore.getNotes()
+  storeNotes.getNotes()
 })
 </script>
 
