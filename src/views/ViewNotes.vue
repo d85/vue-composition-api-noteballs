@@ -45,7 +45,7 @@
   imports
 */
 
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import NoteItem from '@/components/notes/NoteItem.vue'
 import AddEditNote from '@/components/notes/AddEditNote.vue'
 import { useStoreNotes } from '@/stores/storeNotes.js'
@@ -59,14 +59,6 @@ const addEditNoteRef = ref('')
 */
 
 const storeNotes = useStoreNotes()
-
-/*
-  mounted
-*/
-
-onMounted(() => {
-  storeNotes.getNotes()
-})
 
 /*
   notes
